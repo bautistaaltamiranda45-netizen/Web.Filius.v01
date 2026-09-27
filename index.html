@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#2f3929">
+  <meta name="description" content="FILIUS — Microemprendimiento mendocino de producción y venta de aceite de oliva. Arauco y variedades europeas.">
+  <meta name="robots" content="index, follow">
+  <title>FILIUS — Aceite de oliva con origen argentino mendocino</title>
+  <link rel="icon" type="image/png" href="assets/filius-logo-mark.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grain" aria-hidden="true"></div>
+
+  <header class="site-header" id="header">
+    <div class="container nav">
+      <a class="brand" href="#home" aria-label="FILIUS — Inicio">
+        <img src="assets/filius-logo-cropped.png" alt="FILIUS">
+      </a>
+
+      <nav class="nav-links" aria-label="Navegación principal">
+        <a href="#home" data-i18n="nav.home">FILIUS</a>
+        <a href="#products" data-i18n="nav.products">Aceites</a>
+        <a href="#contact" data-i18n="nav.contact">Contacto</a>
+      </nav>
+
+      <div class="nav-actions">
+        <div class="language-switch" role="group" aria-label="Idioma">
+          <button class="lang-btn" type="button" data-lang="es" aria-pressed="true">ES</button>
+          <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+          <button class="lang-btn" type="button" data-lang="pt" aria-pressed="false">PT</button>
+        </div>
+        <button class="nav-order" id="openQuote" type="button">
+          <span data-i18n="nav.order">Pedido</span>
+          <span class="order-badge" id="quoteBadge">0</span>
+        </button>
+        <button class="menu-button" id="menuButton" type="button" aria-label="Abrir menú" aria-expanded="false">☰</button>
+      </div>
+    </div>
+
+    <nav class="mobile-nav" id="mobileNav" aria-label="Menú móvil">
+      <a href="#home" data-i18n="nav.home">FILIUS</a>
+      <a href="#products" data-i18n="nav.products">Aceites</a>
+      <a href="#contact" data-i18n="nav.contact">Contacto</a>
+      <div class="mobile-languages">
+        <span data-i18n="language.label">Idioma</span>
+        <button class="lang-btn" type="button" data-lang="es" aria-pressed="true">ES</button>
+        <button class="lang-btn" type="button" data-lang="en" aria-pressed="false">EN</button>
+        <button class="lang-btn" type="button" data-lang="pt" aria-pressed="false">PT</button>
+      </div>
+      <button class="mobile-order" id="mobileQuote" type="button">
+        <span data-i18n="nav.order">Pedido</span> (<span id="mobileQuoteCount">0</span>)
+      </button>
+    </nav>
+  </header>
+
+  <main id="home">
+    <section class="hero" aria-labelledby="heroTitle">
+      <div class="hero-accent hero-accent-one" aria-hidden="true"></div>
+      <div class="hero-accent hero-accent-two" aria-hidden="true"></div>
+      <div class="container hero-inner">
+        <div class="hero-copy">
+          <p class="eyebrow" data-i18n="hero.eyebrow">Aceite de oliva · Mendoza, Argentina</p>
+          <h1 id="heroTitle" data-i18n="hero.title">Aceite de oliva con origen argentino mendocino.</h1>
+          <p class="hero-body" data-i18n="hero.body">FILIUS es un microemprendimiento de producción y venta de aceite de oliva. Dos variedades: Arauco y variedades europeas.</p>
+          <div class="hero-actions">
+            <a class="button button-light" href="#products" data-i18n="hero.primary">Conocé nuestros aceites <span>↘</span></a>
+            <a class="button button-outline-light" href="#contact" data-i18n="hero.secondary">Pedí información <span>↘</span></a>
+          </div>
+          <div class="hero-meta">
+            <span>FILIUS</span>
+            <span data-i18n="hero.meta">Producción a pequeña escala · venta directa</span>
+            <span>MENDOZA · ARGENTINA</span>
+          </div>
+        </div>
+
+        <div class="hero-product" aria-label="Aceite FILIUS">
+          <div class="hero-product-glow" aria-hidden="true"></div>
+          <div class="hero-product-label top-label">
+            <span>01</span>
+            <strong data-i18n="hero.productTag">ARAUCO</strong>
+          </div>
+          <img src="assets/filius-arauco.jpeg" alt="Botella de aceite de oliva FILIUS Arauco" class="hero-bottle">
+          <div class="hero-product-caption">
+            <span data-i18n="hero.productCaption">Aceite de oliva virgen extra</span>
+            <strong>500 ml</strong>
+          </div>
+        </div>
+      </div>
+      <div class="hero-bottom-line">
+        <span>FILIUS</span>
+        <span>ARAUCO / EUROPEAS</span>
+        <span>ARGENTINA</span>
+      </div>
+    </section>
+
+    <section class="section products" id="products" aria-labelledby="productsTitle">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <p class="eyebrow" data-i18n="products.eyebrow">01 / ACEITES</p>
+            <h2 id="productsTitle" data-i18n="products.title">Dos variedades. Una identidad mendocina.</h2>
+          </div>
+          <p class="section-intro" data-i18n="products.intro">Conocé las dos expresiones de FILIUS y agregá la que querés pedir a tu selección.</p>
+        </div>
+
+        <div class="product-grid" id="productsGrid"></div>
+      </div>
+    </section>
+
+    <section class="section order-section" id="quote" aria-labelledby="orderTitle">
+      <div class="container order-grid">
+        <div class="order-intro">
+          <p class="eyebrow eyebrow-light" data-i18n="order.eyebrow">02 / PEDIDO</p>
+          <h2 id="orderTitle" data-i18n="order.title">Armá tu pedido y recibí la cotización por WhatsApp.</h2>
+          <p data-i18n="order.body">Elegí modalidad, cantidad y variedad. El total se actualiza automáticamente antes de enviarlo al WhatsApp comercial.</p>
+          <button class="distributor-cta" id="openDistributor" type="button">
+            <span data-i18n="order.distributor">Conviértete en mi distribuidor</span>
+            <span>↗</span>
+          </button>
+        </div>
+
+        <div class="order-card">
+          <div class="pricing-switch" role="group" aria-label="Modalidad de precio">
+            <button class="pricing-option is-active" type="button" data-order-type="retail" aria-pressed="true">
+              <span data-i18n="order.retail">Por menor</span>
+              <strong id="retailPriceLabel">$6.000</strong>
+            </button>
+            <button class="pricing-option" type="button" data-order-type="wholesale" aria-pressed="false">
+              <span data-i18n="order.wholesale">Por mayor</span>
+              <strong id="wholesalePriceLabel">$18.000</strong>
+            </button>
+          </div>
+
+          <div class="order-summary-head">
+            <div>
+              <span class="mini-label" data-i18n="order.selected">Tu selección</span>
+              <strong id="orderTypeLabel">Por menor</strong>
+            </div>
+            <span id="orderUnitLabel" class="unit-label">/ botella</span>
+          </div>
+
+          <div id="quoteList" class="quote-list"></div>
+
+          <div class="quote-empty" id="quoteEmpty">
+            <span>+</span>
+            <p data-i18n="order.empty">Todavía no agregaste un aceite. Elegilo en la sección Aceites.</p>
+          </div>
+
+          <div class="quote-totals">
+            <div><span data-i18n="order.units">Unidades</span><strong id="quoteUnits">0</strong></div>
+            <div class="grand-total"><span data-i18n="order.total">Total</span><strong id="quoteGrandTotal">$0</strong></div>
+          </div>
+
+          <div class="order-actions">
+            <button class="button button-whatsapp" id="sendQuoteWhatsapp" type="button" disabled>
+              <span data-i18n="order.send">Enviar pedido por WhatsApp</span>
+              <span>↗</span>
+            </button>
+            <button class="button button-dark-ghost" id="clearQuote" type="button" data-i18n="order.clear">Vaciar pedido</button>
+          </div>
+          <p class="form-note" id="quoteStatus" role="status"></p>
+        </div>
+      </div>
+    </section>
+
+    <section class="section contact" id="contact" aria-labelledby="contactTitle">
+      <div class="container contact-grid">
+        <div class="contact-copy">
+          <p class="eyebrow" data-i18n="contact.eyebrow">03 / CONTACTO</p>
+          <h2 id="contactTitle" data-i18n="contact.title">Pedí información</h2>
+          <p data-i18n="contact.body">Escribinos para conocer los aceites FILIUS, consultar disponibilidad o coordinar un pedido.</p>
+
+          <div class="contact-direct">
+            <div>
+              <span data-i18n="contact.whatsappLabel">WhatsApp comercial</span>
+              <strong>+54 261 550-3895</strong>
+            </div>
+            <a class="button button-outline" href="https://wa.me/542615503895" target="_blank" rel="noopener" data-i18n="contact.whatsapp">Abrir WhatsApp ↗</a>
+          </div>
+
+          <form class="contact-form" id="contactForm">
+            <label>
+              <span data-i18n="contact.name">Nombre</span>
+              <input id="contactName" type="text" maxlength="80" required placeholder="Tu nombre">
+            </label>
+            <label>
+              <span data-i18n="contact.phone">Teléfono</span>
+              <input id="contactPhone" type="tel" maxlength="40" required placeholder="+54 9 ...">
+            </label>
+            <label>
+              <span data-i18n="contact.email">Correo</span>
+              <input id="contactEmail" type="email" maxlength="120" placeholder="tu@email.com">
+            </label>
+            <label>
+              <span data-i18n="contact.message">Mensaje</span>
+              <textarea id="contactMessage" rows="4" maxlength="1200" required placeholder="Quiero información sobre FILIUS..."></textarea>
+            </label>
+            <button class="button button-dark" type="submit">
+              <span data-i18n="contact.submit">Enviar consulta por WhatsApp</span>
+              <span>↗</span>
+            </button>
+            <p class="form-note form-note-dark" id="contactStatus" role="status"></p>
+          </form>
+        </div>
+
+        <div class="map-card">
+          <div class="map-head">
+            <div>
+              <span class="mini-label" data-i18n="contact.location">UBICACIÓN</span>
+              <strong>Maipú, Mendoza</strong>
+            </div>
+            <span>ARG</span>
+          </div>
+          <iframe
+            src="https://www.google.com/maps?q=Maip%C3%BA%2C%20Mendoza%2C%20Argentina&z=13&output=embed"
+            title="Mapa de Maipú, Mendoza, Argentina"
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"></iframe>
+          <div class="map-caption" data-i18n="contact.mapCaption">Centro de referencia: Maipú, Mendoza, Argentina.</div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-bar">
+      <div class="footer-brand">
+        <strong>FILIUS</strong>
+        <span data-i18n="footer.description">Aceite de oliva con origen argentino mendocino.</span>
+      </div>
+
+      <div class="footer-links">
+        <a href="#home" data-i18n="nav.home">FILIUS</a>
+        <a href="#products" data-i18n="nav.products">Aceites</a>
+        <a href="#contact" data-i18n="nav.contact">Contacto</a>
+      </div>
+
+      <div class="footer-creator">
+        <span data-i18n="footer.creator">Creado por</span>
+        <img src="assets/creator-logo.png" alt="Logo del creador del sitio">
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <span>FILIUS · MENDOZA · ARGENTINA</span>
+      <span data-i18n="footer.rights">Producción y venta de aceite de oliva</span>
+    </div>
+  </footer>
+
+  <div class="modal" id="productModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="productModalTitle">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card product-modal-card">
+      <button class="close-button" type="button" data-close-modal aria-label="Cerrar">×</button>
+      <div class="modal-image"><img id="modalProductImage" src="" alt=""></div>
+      <div class="modal-content">
+        <p class="eyebrow" id="modalProductVariety">FILIUS</p>
+        <h2 id="productModalTitle">Aceite FILIUS</h2>
+        <p id="modalProductDesc"></p>
+        <div class="modal-price" id="modalProductPrice">$6.000</div>
+        <div class="qty-line">
+          <label for="modalProductQty" data-i18n="product.quantity">Cantidad</label>
+          <input id="modalProductQty" type="number" min="1" max="50" value="1">
+        </div>
+        <button class="button button-dark" id="addProductQuote" type="button">
+          <span data-i18n="product.add">Agregar al pedido</span><span>↗</span>
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <div class="modal" id="distributorModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="distributorTitle">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-card distributor-card">
+      <button class="close-button" type="button" data-close-modal aria-label="Cerrar">×</button>
+      <p class="eyebrow" data-i18n="distributor.eyebrow">FILIUS · DISTRIBUCIÓN</p>
+      <h2 id="distributorTitle" data-i18n="distributor.title">Conviértete en mi distribuidor.</h2>
+      <p data-i18n="distributor.body">Contanos quién sos y dónde querés comercializar FILIUS. La solicitud se envía por WhatsApp.</p>
+      <div class="distributor-form">
+        <label><span data-i18n="distributor.name">Nombre</span><input id="distName" type="text" required placeholder="Tu nombre"></label>
+        <label><span data-i18n="distributor.company">Empresa / negocio</span><input id="distCompany" type="text" placeholder="Empresa o comercio"></label>
+        <label><span data-i18n="distributor.location">Localidad</span><input id="distLocation" type="text" placeholder="Ciudad / provincia"></label>
+        <label><span data-i18n="distributor.phone">Teléfono</span><input id="distPhone" type="tel" required placeholder="+54 9 ..."></label>
+        <label><span data-i18n="distributor.message">Mensaje</span><textarea id="distMessage" rows="4" placeholder="Contanos qué volumen te interesa..."></textarea></label>
+      </div>
+      <button class="button button-dark" id="sendDistributorWhatsapp" type="button">
+        <span data-i18n="distributor.send">Enviar solicitud por WhatsApp</span><span>↗</span>
+      </button>
+      <p class="form-note" id="distStatus" role="status"></p>
+    </div>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
